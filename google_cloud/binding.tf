@@ -4,7 +4,8 @@ variable "aws_writer_role_name" {
 
 resource "google_storage_bucket_iam_binding" "writer_bucket_iam_binding" {
   bucket = google_storage_bucket.bucket.name
-  role   = "roles/storage.objectCreator"
+  # objectCreaterだとファイルの上書きができない
+  role = "roles/storage.objectUser"
   members = [
     "principalSet://iam.googleapis.com/projects/${data.google_project.project.number}/locations/global/workloadIdentityPools/${google_iam_workload_identity_pool.id_pool.workload_identity_pool_id}/attribute.aws_role/${var.aws_writer_role_name}"
   ]
