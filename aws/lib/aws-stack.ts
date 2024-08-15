@@ -1,7 +1,7 @@
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
-import { LambdaConstruct } from "./lambda-construct";
 import { EcsConstruct } from "./ecs-construct";
+import { LambdaConstruct } from "./lambda-construct";
 
 export class Stack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
