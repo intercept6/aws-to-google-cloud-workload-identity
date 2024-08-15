@@ -1,6 +1,5 @@
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
-import { join } from "path";
 import { LambdaConstruct } from "./lambda-construct";
 import { EcsConstruct } from "./ecs-construct";
 
