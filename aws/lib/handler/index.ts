@@ -1,7 +1,6 @@
-import { Handler } from "aws-lambda";
 import { Storage } from "@google-cloud/storage";
+import { Handler } from "aws-lambda";
 import * as credentials from "./credentials.json";
-import { AwsClient } from "google-auth-library";
 
 const storage = new Storage({
   projectId: process.env.PROJECT_ID,
